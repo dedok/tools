@@ -55,5 +55,6 @@ Bundle 'vim-scripts/fontzoom.vim'
 Bundle 'vim-scripts/iptables'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'vim-scripts/tComment'
+Bundle 'endel/vim-github-colorscheme'
 
 filetype plugin indent on
