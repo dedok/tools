@@ -6,8 +6,8 @@ VUNDLE_PATH=~/.vim/bundle/vundle
 PLUGINS_PATH=~/.vim/plugins.vim
 REPO=https://github.com/gmarik/vundle.git
 
-link vimrc $VIMRC &>2 /dev/null
-link plugins.vim $VIM_PLUGINS &>2 /dev/null
+link vimrc $VIMRC &> /dev/null
+link plugins.vim $VIM_PLUGINS &> /dev/null
 
 ([ -e $VUNDLE_PATH ] && {
     cd $VUNDLE_PATH && git pull origin master || exit 1

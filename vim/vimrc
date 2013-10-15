@@ -1,5 +1,7 @@
 source ~/.vim/plugins.vim
 
+set omnifunc=syntaxcomplete#Complete
+
 set hidden " don't unload buffer when switching away
 set modeline " allow per-file settings via modeline
 set exrc " enable per-directory .vimrc files
