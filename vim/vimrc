@@ -94,18 +94,12 @@ noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>gb :Gblame<CR>
 
 " move between windows with M-hjkl (urxvt then gvim)
-" noremap <Esc>h <C-w>h
-" noremap <Esc>j <C-w>j
-" noremap <Esc>k <C-w>k
-" noremap <Esc>l <C-w>l
 noremap <M-h> <C-w>h
 noremap <M-j> <C-w>j
 noremap <M-k> <C-w>k
 noremap <M-l> <C-w>l
-
-" jump 5 lines with C-jk
-noremap <C-j> 5j
-noremap <C-k> 5k
+noremap <C-k> :tabnext<CR>
+noremap <C-j> :tabprev<CR>
 
 " NERDTree
 let NERDTreeWinPos='right'
