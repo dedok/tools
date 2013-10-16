@@ -28,7 +28,7 @@ set guioptions-=r " turn off GUI right scrollbar
 set guioptions-=L " turn off GUI left scrollbar
 set winaltkeys=no " turn off stupid fucking alt shortcuts
 set laststatus=2 " always show status bar
-set nu cin wrap
+set cin wrap
 
 " middle-click paste
 map! <S-Insert> <MiddleMouse>
@@ -36,28 +36,24 @@ map! <S-Insert> <MiddleMouse>
 " appearance
 syntax on
 set t_Co=256 " 256 colors in terminal
-set guifont=Ubuntu\ Mono\ 11
-let g:molokai_original=1
-highlight LineNr guifg=#050505
-highlight LineNr ctermfg=grey
+colorscheme evening
 
-" override some highlight settings (turn off stupid italics in Molokai)
+" override highlight settings
 highlight DiffText gui=none
 highlight Macro gui=none
 highlight SpecialKey gui=none
 highlight Special gui=none
 highlight StorageClass gui=none
 highlight Tag gui=none
+highlight LineNr guifg=#050505
+highlight LineNr ctermfg=grey
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
 
 " highlight the 80th column
-"
-" In Vim >= 7.3, also highlight columns 120+
 if exists('+colorcolumn')
-" (I picked 120-320 because you have to provide an upper bound and 320 just
-" covers a 1080p GVim window in Ubuntu Mono 11 font.)
-  let &colorcolumn="80,".join(range(120,320),",")
+  let &colorcolumn="80"
 else
-" fallback for Vim < v7.3
   autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
