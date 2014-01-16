@@ -1,10 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-VIMRC=~/.vimrc
-VIM_PLUGINS=~/.vim/plugins.vim
-VUNDLE_PATH=~/.vim/bundle/vundle
-PLUGINS_PATH=~/.vim/plugins.vim
+VIMRC="${HOME}/.vimrc"
+VIM_DIR="${HOME}/.vim"
+VIM_PLUGINS="${VIM_DIR}/plugins.vim"
+VUNDLE_PATH="${VIM_DIR}/bundle/vundle"
+PLUGINS_PATH="${VIM_DIR}/plugins.vim"
 REPO=https://github.com/gmarik/vundle.git
+
+if [ ! -d $VIM_DIR ]
+then
+  mkdir -p $VIM_DIR
+fi
 
 link vimrc $VIMRC &> /dev/null
 link plugins.vim $VIM_PLUGINS &> /dev/null
