@@ -36,7 +36,7 @@ map! <S-Insert> <MiddleMouse>
 " appearance
 syntax on
 set t_Co=256 " 256 colors in terminal
-colorscheme evening
+" colorscheme evening
 
 " override highlight settings
 highlight DiffText gui=none

@@ -7,10 +7,7 @@ VUNDLE_PATH="${VIM_DIR}/bundle/vundle"
 PLUGINS_PATH="${VIM_DIR}/plugins.vim"
 REPO=https://github.com/gmarik/vundle.git
 
-if [ ! -d $VIM_DIR ]
-then
-  mkdir -p $VIM_DIR
-fi
+[ ! -d $VIM_DIR ] && mkdir -p $VIM_DIR
 
 link vimrc $VIMRC &> /dev/null
 link plugins.vim $VIM_PLUGINS &> /dev/null
@@ -21,4 +18,7 @@ link plugins.vim $VIM_PLUGINS &> /dev/null
     git clone $REPO $VUNDLE_PATH || exit 2
 }
 
+touch $VIM_DIR/localrc.vim || exit 3
+
 vim -u $PLUGINS_PATH -c 'BundleInstall!' -c 'qall'
+
