@@ -36,7 +36,7 @@ map! <S-Insert> <MiddleMouse>
 " appearance
 syntax on
 set t_Co=256 " 256 colors in terminal
-colorscheme evening
+" colorscheme evening
 
 " override highlight settings
 highlight DiffText gui=none
@@ -104,3 +104,5 @@ noremap <C-j> :tabprev<CR>
 " NERDTree
 let NERDTreeWinPos='right'
 map <C-Bslash> :NERDTreeToggle<CR>
+
+source ~/.vim/localrc.vim
