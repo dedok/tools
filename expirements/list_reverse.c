@@ -17,6 +17,8 @@ void print(node_t *head)
 // 22.49
 int main(int argc, char **argv)
 {
+    (void)argc, (void)argv;
+
     node_t *head = (node_t *)calloc(1, sizeof(node_t));
     {
         node_t *it = head;
