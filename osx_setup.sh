@@ -17,6 +17,7 @@ brew install tmux
 echo '[+] Installing scripts'
 cp $PWD/bash_profile $HOME/.bash_profile
 cp $PWD/bashrc $HOME/.mybashrc.sh
+cp $PWD/gitconfig $HOME/.gitconfig
 
 echo '[+] Installing VIM'
 cd vim

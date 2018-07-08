@@ -1,0 +1,15 @@
+
+#
+# My config
+#
+
+#[user]
+  name = Vasiliy Soshnikov
+  email = dedok.mad@gmail.com
+
+#  email = vasiliy.soshnikov@quantil.com
+[core]
+  editor = vim
+
+[merge]
+  tool = vimdiff
