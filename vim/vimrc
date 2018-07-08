@@ -20,8 +20,8 @@ set number " show line numbers on left
 set nofoldenable " I fucking hate code folding
 set scrolloff=10 " scroll the window so we can always see 10 lines around the cursor
 set textwidth=80 " show a vertical line at the 79th character
-set cursorline " highlight the current line
-set cursorcolumn " highlight the current line
+"set cursorline " highlight the current line
+"set cursorcolumn " highlight the current line
 set printoptions=paper:letter " use letter as the print output format
 set guioptions-=T " turn off GUI toolbar (icons)
 set guioptions-=r " turn off GUI right scrollbar
@@ -104,5 +104,7 @@ noremap <C-j> :tabprev<CR>
 " NERDTree
 let NERDTreeWinPos='right'
 map <C-Bslash> :NERDTreeToggle<CR>
+
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 source ~/.vim/localrc.vim
