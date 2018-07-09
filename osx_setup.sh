@@ -13,6 +13,7 @@ brew install ctags
 brew install cscope
 brew install node
 brew install tmux
+brew install cmake
 
 echo '[+] Installing scripts'
 cp $PWD/bash_profile $HOME/.bash_profile

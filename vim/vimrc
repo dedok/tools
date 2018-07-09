@@ -29,6 +29,9 @@ set guioptions-=L " turn off GUI left scrollbar
 set winaltkeys=no " turn off stupid fucking alt shortcuts
 set laststatus=2 " always show status bar
 set cin wrap
+hi Visual guifg=Red guibg=LightBlue gui=none
+hi Search ctermbg=LightBlue
+hi Search ctermfg=Red
 
 " middle-click paste
 map! <S-Insert> <MiddleMouse>
